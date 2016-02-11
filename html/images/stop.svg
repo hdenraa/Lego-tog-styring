@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--part of the rodentia icon theme by sixsixfive released under CC0 (https://creativecommons.org/publicdomain/zero/1.0/) on openclipart-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+ <defs id="0">
+  <linearGradient id="2">
+   <stop id="H" stop-color="#2e3436"/>
+   <stop id="I" offset="1" stop-color="#2e3436" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="3">
+   <stop id="J" stop-color="#fff"/>
+   <stop id="K" offset="1" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="4">
+   <stop id="L" stop-color="#fff" stop-opacity="0.8"/>
+   <stop id="M" offset="1" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <radialGradient cx="60.05" cy="51.39" r="15.03" id="5" xlink:href="#6" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-1.404511,1.1888571,-1,-1.1813958,199.73811,11.750541)"/>
+  <linearGradient id="6">
+   <stop id="N" stop-color="#eee"/>
+   <stop id="O" offset="1" stop-color="#dcdcdc"/>
+  </linearGradient>
+  <radialGradient cx="27.4" cy="45.24" r="19.666" id="7" xlink:href="#2" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1,0,0,0.1179775,0,39.900813)"/>
+  <linearGradient y1="4.063" x2="0" y2="43.938" id="8" xlink:href="#4" gradientUnits="userSpaceOnUse"/>
+  <linearGradient x1="4.188" y1="-29.571" x2="24" y2="28.312" id="9" xlink:href="#3" gradientUnits="userSpaceOnUse"/>
+ </defs>
+ <g transform="translate(-5.0000001e-8,-0.8785582)" id="1">
+  <path d="m 47.066795,45.237865 a 19.666407,2.3201942 0 1 1 -39.3328129,0 19.666407,2.3201942 0 1 1 39.3328129,0 z" transform="matrix(0.8146067,0,0,1,1.6794598,-0.8000597)" id="A" opacity="0.8" fill="url(#7)"/>
+  <path d="m 15.791096,2.9991165 16.686731,0 L 45,15.788106 l 0,17.476218 -12.353525,11.73656 -17.023715,0 -12.6227599,-12.53916 0,-16.793072 12.7910959,-12.6695355 0,0 0,0 z" id="B" fill="#7c0000" fill-rule="evenodd"/>
+  <path d="M 16.28125,4.1875 4.1875,16.15625 l 0,15.8125 11.9375,11.84375 16.0625,0 11.625,-11.09375 0,-16.4375 -11.84375,-12.09375 -15.6875,0 z" id="C" fill="#c00" fill-rule="evenodd"/>
+  <path d="M 16.40625,4.5625 4.5625,16.28125 l 0,15.5625 11.6875,11.59375 15.8125,0 11.375,-10.84375 0,-16.15625 -11.625,-11.875 -15.40625,0 z" id="D" opacity="0.8" fill="none" stroke="url(#8)"/>
+  <path d="M 11.817979,18.504351 17.313628,24 11.817979,29.495649 18.504351,36.182021 24,30.686372 29.495649,36.182021 36.182021,29.495649 30.686372,24 36.182021,18.504351 29.495649,11.817979 24,17.313628 18.504351,11.817979 11.817979,18.504351 z" id="E" opacity="0.6" fill="#7c0000"/>
+  <path d="M 18.5,13.1875 13.1875,18.5 18,23.3125 a 0.95216968,0.95216968 0 0 1 0,1.375 L 13.1875,29.5 18.5,34.8125 23.3125,30 a 0.95216968,0.95216968 0 0 1 1.375,0 L 29.5,34.8125 34.8125,29.5 30,24.6875 a 0.95216968,0.95216968 0 0 1 0,-1.375 L 34.8125,18.5 29.5,13.1875 24.6875,18 a 0.95216968,0.95216968 0 0 1 -1.375,0 L 18.5,13.1875 z" id="F" fill="#eeeeec"/>
+  <path d="M 16.28125,4.1875 4.1875,16.15625 l 0,10.15625 c 14.036097,-6.434308 21.678534,-10.337545 39.625,-9.84375 l 0,-0.1875 -11.84375,-12.09375 -15.6875,0 z" id="G" opacity="0.8" fill="url(#9)" fill-rule="evenodd"/>
+ </g>
+</svg>
