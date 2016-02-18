@@ -1,5 +1,5 @@
 jQuery(document).bind("move-ahead", function (){
-    jQuery.get("http://localhost:5000/start", function(){
+    jQuery.get("/app/start", function(){
         alert('success');
     })
         .done(function() {
