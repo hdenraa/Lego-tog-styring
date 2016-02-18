@@ -40,7 +40,7 @@ server {
 	}
 	location /app/ {
 		# App server
-		proxy_pass http://localhost:3000/;
+		proxy_pass http://localhost:5000/;
 	}
         
 	# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
