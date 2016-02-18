@@ -1,0 +1,5 @@
+Flask
+Pagekite - Måske
+uv4l
+Nginx
+Jquery
