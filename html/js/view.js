@@ -1,6 +1,9 @@
 jQuery(".control.ahead").click(function(){
     jQuery(document).trigger('move-ahead');
 });
+jQuery(".control.decrease").click(function(){
+    jQuery(document).trigger('decrease-speed');
+});
 jQuery(".control.stop").click(function(){
     jQuery(document).trigger('stop-engine');
 });
