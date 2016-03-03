@@ -21,22 +21,30 @@ myMotor = mh.getMotor(3)
 currentSpeed=0
 def setSpeed(finalSpeed=None, delta=None):
         if finalSpeed is not None:
+                print "Final Speed"
                 endSpeed=finalSpeed
         elif delta is not None:
+                print "Delta"
                 endSpeed=(currentSpeed +  delta)
         if endSpeed > 255:
+                print "Max Speed Forward"
                 endSpeed=255
         if endSpeed < -255:
+                print "Max Speed Backward"
                 endSpeed=-255
         prev =currentSpeed
         for i in range(currentSpeed, endSpeed):
                 if prev == 0 and i == 1:
+                        print "Switch to forward"
                         myMotor.run(Adafruit_MotorHAT.FORWARD)
                 elif prev == 0 and i == -1:
+                        print "Switch to backward"
                         myMotor.run(Adafruit_MotorHAT.BACKWARD)
                 myMotor.setSpeed(abs(i))
+                print "current Speed: " + str(i)
                 time.sleep(0.1)
                 prev=i
+                currentSpeed=i
 
 if __name__ == '__main__':
     setSpeed(finalSpeed=100)
