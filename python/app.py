@@ -9,9 +9,9 @@ def final(speed):
     setSpeed(finalSpeed=speed)
     return jsonify({"status": "Start"})
 
-@app.route("/delta/<int:delta>")
+@app.route("/delta/<delta>")
 def delta(delta):
-    setSpeed(delta=delta)
+    setSpeed(delta=int(delta))
     return jsonify({"status": "Stop"})
 
 if __name__ == "__main__":
