@@ -34,7 +34,12 @@ def setSpeed(finalSpeed=None, delta=None):
                 print "Max Speed Backward"
                 endSpeed=-255
         prev =currentSpeed
-        for i in range(currentSpeed, endSpeed):
+
+        if endSpeed >= currentSpeed:
+                step=1
+        else:
+                step=-1
+        for i in range(currentSpeed, endSpeed, step):
                 if prev == 0 and i == 1:
                         print "Switch to forward"
                         myMotor.run(Adafruit_MotorHAT.FORWARD)
