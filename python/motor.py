@@ -20,6 +20,7 @@ atexit.register(turnOffMotors)
 myMotor = mh.getMotor(3)
 currentSpeed=0
 def setSpeed(finalSpeed=None, delta=None):
+        global currentSpeed
         if finalSpeed is not None:
                 print "Final Speed"
                 endSpeed=finalSpeed
