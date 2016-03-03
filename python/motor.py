@@ -39,4 +39,6 @@ def setSpeed(finalSpeed=None, delta=None):
                 prev=i
 
 if __name__ == '__main__':
-    setSpeed(finalSpeed=1000)
+    setSpeed(finalSpeed=100)
+    setSpeed(delta=-100)
+    print "Done"
