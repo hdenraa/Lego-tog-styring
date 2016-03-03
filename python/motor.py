@@ -24,6 +24,10 @@ def setSpeed(finalSpeed=None, delta=None):
                 endSpeed=finalSpeed
         elif delta is not None:
                 endSpeed=(currentSpeed +  delta)
+        if endSpeed > 255:
+                endSpeed=255
+        if endSpeed < -255:
+                endSpeed=-255
         prev =currentSpeed
         for i in range(currentSpeed, endSpeed):
                 if prev == 0 and i == 1:
@@ -31,7 +35,7 @@ def setSpeed(finalSpeed=None, delta=None):
                 elif prev == 0 and i == -1:
                         myMotor.run(Adafruit_MotorHAT.BACKWARD)
                 myMotor.setSpeed(abs(i))
-                time.sleep(0.01)
+                time.sleep(0.1)
                 prev=i
 
 if __name__ == '__main__':
