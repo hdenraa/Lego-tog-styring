@@ -9,50 +9,30 @@ mh = Adafruit_MotorHAT(addr=0x60)
 
 # recommended for auto-disabling motors on shutdown!
 def turnOffMotors():
-	mh.getMotor(1).run(Adafruit_MotorHAT.RELEASE)
-	mh.getMotor(2).run(Adafruit_MotorHAT.RELEASE)
-	mh.getMotor(3).run(Adafruit_MotorHAT.RELEASE)
-	mh.getMotor(4).run(Adafruit_MotorHAT.RELEASE)
+        mh.getMotor(1).run(Adafruit_MotorHAT.RELEASE)
+        mh.getMotor(2).run(Adafruit_MotorHAT.RELEASE)
+        mh.getMotor(3).run(Adafruit_MotorHAT.RELEASE)
+        mh.getMotor(4).run(Adafruit_MotorHAT.RELEASE)
 
 atexit.register(turnOffMotors)
 
 ################################# DC motor test!
 myMotor = mh.getMotor(3)
+currentSpeed=0
+def setSpeed(finalSpeed=None, delta=None):
+        if finalSpeed is not None:
+                endSpeed=finalSpeed
+        elif delta is not None:
+                endSpeed=(currentSpeed +  delta)
+        prev =currentSpeed
+        for i in range(currentSpeed, endSpeed):
+                if prev == 0 and i == 1:
+                        myMotor.run(Adafruit_MotorHAT.FORWARD)
+                elif prev == 0 and i == -1:
+                        myMotor.run(Adafruit_MotorHAT.BACKWARD)
+                myMotor.setSpeed(abs(i))
+                time.sleep(0.01)
+                prev=i
 
-# set the speed to start, from 0 (off) to 255 (max speed)
-myMotor.setSpeed(150)
-myMotor.run(Adafruit_MotorHAT.FORWARD);
-# turn on motor
-myMotor.run(Adafruit_MotorHAT.RELEASE);
-
-
-while (True):
-	print "Forward! "
-	myMotor.run(Adafruit_MotorHAT.FORWARD)
-
-	print "\tSpeed up..."
-	for i in range(255):
-		myMotor.setSpeed(i)
-		time.sleep(0.01)
-
-	print "\tSlow down..."
-	for i in reversed(range(255)):
-		myMotor.setSpeed(i)
-		time.sleep(0.01)
-
-	print "Backward! "
-	myMotor.run(Adafruit_MotorHAT.BACKWARD)
-
-	print "\tSpeed up..."
-	for i in range(255):
-		myMotor.setSpeed(i)
-		time.sleep(0.01)
-
-	print "\tSlow down..."
-	for i in reversed(range(255)):
-		myMotor.setSpeed(i)
-		time.sleep(0.01)
-
-	print "Release"
-	myMotor.run(Adafruit_MotorHAT.RELEASE)
-	time.sleep(1.0)
+if __name__ == '__main__':
+    setSpeed(finalSpeed=100)
