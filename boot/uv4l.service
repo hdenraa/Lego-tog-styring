@@ -1,0 +1,20 @@
+[Unit]
+Description=Stream video
+After=syslog.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/uv4l \
+--auto-video_nr \
+--driver raspicam \
+--encoding mjpeg \
+--server-option \
+'--port=9000' \
+--driver raspicam \
+--rotation 180 \
+--width 352 \
+--height 288
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
