@@ -1,0 +1,11 @@
+[Unit]
+Description=Start python server for lego tog
+After=syslog.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/python /home/pi/Lego-tog-styring/python/app.py 
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
