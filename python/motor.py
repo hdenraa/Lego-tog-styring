@@ -33,7 +33,6 @@ def setSpeed(finalSpeed=None, delta=None):
         if endSpeed < -255:
                 print "Max Speed Backward"
                 endSpeed=-255
-        prev =currentSpeed
 
         if endSpeed >= currentSpeed:
                 step=1
@@ -46,18 +45,15 @@ def setSpeed(finalSpeed=None, delta=None):
         if abs(endSpeed) < 150:
                 endSpeed = 0
 
-        for i in range(currentSpeed, endSpeed + step, step):
-                if prev == 0 and i == 1:
-                        print "Switch to forward"
-                        myMotor.run(Adafruit_MotorHAT.FORWARD)
-                elif prev == 0 and i == -1:
-                        print "Switch to backward"
-                        myMotor.run(Adafruit_MotorHAT.BACKWARD)
-                myMotor.setSpeed(abs(i))
-                print "current Speed: " + str(i)
-                time.sleep(0.1)
-                prev=i
-                currentSpeed=i
+        if currentSpeed == 0 and step == 1:
+                print "Switch to forward"
+                myMotor.run(Adafruit_MotorHAT.FORWARD)
+        elif currentSpeed == 0 and step == -1:
+                print "Switch to backward"
+                myMotor.run(Adafruit_MotorHAT.BACKWARD)
+
+        myMotor.setSpeed(abs(endSpeed))
+        currentSpeed=endSpeed
         return endSpeed
 if __name__ == '__main__':
     setSpeed(finalSpeed=100)
