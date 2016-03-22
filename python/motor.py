@@ -46,7 +46,7 @@ def setSpeed(finalSpeed=None, delta=None):
         if abs(endSpeed) < 100:
                 endSpeed = 0
 
-        for i in range(currentSpeed, endSpeed, step):
+        for i in range(currentSpeed, endSpeed + step, step):
                 if prev == 0 and i == 1:
                         print "Switch to forward"
                         myMotor.run(Adafruit_MotorHAT.FORWARD)
