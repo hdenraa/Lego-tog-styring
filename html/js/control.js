@@ -1,5 +1,5 @@
 jQuery(document).bind("move-ahead", function (){
-    jQuery.get("/app/delta/51", function(){
+    jQuery.get("/app/delta/25", function(){
     })
         .done(function() {
         })
@@ -9,7 +9,7 @@ jQuery(document).bind("move-ahead", function (){
 });
 
 jQuery(document).bind("decrease-speed",function(){
-    jQuery.get("/app/delta/-51")
+    jQuery.get("/app/delta/-25")
         .done(function(){
         })
         .fail(function(e){
@@ -18,4 +18,10 @@ jQuery(document).bind("decrease-speed",function(){
 });
 
 jQuery(document).bind("stop-engine", function (){
+    jQuery.get("/app/stop")
+        .done(function(){
+        })
+        .fail(function(e){
+            console.log(e);
+        });
 });
