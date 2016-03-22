@@ -18,4 +18,4 @@ jQuery(document).bind("decrease-speed",function(){
 });
 
 jQuery(document).bind("stop-engine", function (){
-})
+});
