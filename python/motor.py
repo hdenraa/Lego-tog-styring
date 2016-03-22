@@ -39,6 +39,10 @@ def setSpeed(finalSpeed=None, delta=None):
                 step=1
         else:
                 step=-1
+
+        if abs(endSpeed) == 25:
+                endSpeed = step *75
+
         for i in range(currentSpeed, endSpeed, step):
                 if prev == 0 and i == 1:
                         print "Switch to forward"
@@ -51,7 +55,7 @@ def setSpeed(finalSpeed=None, delta=None):
                 time.sleep(0.1)
                 prev=i
                 currentSpeed=i
-
+        return endSpeed
 if __name__ == '__main__':
     setSpeed(finalSpeed=100)
     setSpeed(delta=-100)

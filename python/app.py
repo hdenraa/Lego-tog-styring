@@ -6,13 +6,16 @@ app = Flask(__name__)
 
 @app.route("/final/<int:speed>")
 def final(speed):
-    setSpeed(finalSpeed=speed)
-    return jsonify({"status": "Start"})
+    return jsonify({"speed": setSpeed(finalSpeed=speed)})
 
 @app.route("/delta/<delta>")
 def delta(delta):
-    setSpeed(delta=int(delta))
-    return jsonify({"status": "Stop"})
+    return jsonify({"speed": setSpeed(delta=int(delta))})
+
+@app.route("/stop")
+def stop():
+    setSpeed(finalSpeed=0)
+    return jsonify({"speed": 0})
 
 if __name__ == "__main__":
     app.debug = True
