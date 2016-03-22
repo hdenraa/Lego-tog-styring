@@ -41,9 +41,9 @@ def setSpeed(finalSpeed=None, delta=None):
                 step=-1
 
         if abs(endSpeed) == 51 and currentSpeed == 0:
-                endSpeed = step *100
+                endSpeed = step *150
 
-        if abs(endSpeed) < 100:
+        if abs(endSpeed) < 150:
                 endSpeed = 0
 
         for i in range(currentSpeed, endSpeed + step, step):
