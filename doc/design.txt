@@ -3,3 +3,8 @@ Pagekite - Måske
 uv4l
 Nginx
 Jquery
+
+
+DigitalOcean server
+Navn: Barfly_lego_tog
+IP: 46.101.247.112
