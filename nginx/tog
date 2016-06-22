@@ -42,7 +42,12 @@ server {
 		# App server
 		proxy_pass http://127.0.0.1:5000/;
 	}
-        
+
+        location /video/ {
+		# camera feed
+		proxy_pass http://127.0.0.1:9000/;
+        }
+	
 	# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
 	#
 	#location ~ \.php$ {
