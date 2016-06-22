@@ -9,9 +9,9 @@ function drawChart() {
 
     var options = {
         width: 400, height: 120,
-        redFrom: 90, redTo: 100,
-        yellowFrom:75, yellowTo: 90,
-        minorTicks: 5
+        minorTicks: 5,
+        min: -255,
+        max: 255
     };
 
     var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
