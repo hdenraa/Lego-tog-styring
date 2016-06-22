@@ -17,7 +17,7 @@ function drawChart() {
     var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
 
     chart.draw(data, options);
-}
+
 
     jQuery(document).bind("move-ahead", function (){
     jQuery.get("/app/delta/25")
@@ -28,7 +28,9 @@ function drawChart() {
         .fail(function(e){
             console.log(e);
         });
-});
+
+    });
+}
 
 jQuery(document).bind("decrease-speed",function(){
     jQuery.get("/app/delta/-25")
