@@ -30,7 +30,7 @@ function drawChart() {
         });
 
     });
-}
+
 
 jQuery(document).bind("decrease-speed",function(){
     jQuery.get("/app/delta/-25")
@@ -45,9 +45,12 @@ jQuery(document).bind("decrease-speed",function(){
 
 jQuery(document).bind("stop-engine", function (){
     jQuery.get("/app/stop")
-        .done(function(){
+        .done(function(speed){
+            data.setValue(0, 1,speed.speed);
+            chart.draw(data, options);
         })
         .fail(function(e){
             console.log(e);
         });
 });
+}
