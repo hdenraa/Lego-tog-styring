@@ -14,7 +14,8 @@ ExecStart=/usr/bin/uv4l \
 --rotation 180 \
 --width 320 \
 --height 240 \
---framerate 15
+--framerate 15 \
+--intra-refresh-mode adaptive
 Restart=on-abort
 
 [Install]
