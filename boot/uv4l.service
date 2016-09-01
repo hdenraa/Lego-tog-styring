@@ -14,6 +14,7 @@ ExecStart=/usr/bin/uv4l \
 --rotation 180 \
 --width 176 \
 --height 144
+--framerate 15
 Restart=on-abort
 
 [Install]
