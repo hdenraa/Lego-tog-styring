@@ -15,7 +15,9 @@ ExecStart=/usr/bin/uv4l \
 --width 320 \
 --height 240 \
 --framerate 15 \
---intra-refresh-mode adaptive
+--intra-refresh-mode adaptive \
+--video-denoise no \
+--profile baseline
 Restart=on-abort
 
 [Install]
