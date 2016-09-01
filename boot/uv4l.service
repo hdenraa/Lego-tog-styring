@@ -12,8 +12,8 @@ ExecStart=/usr/bin/uv4l \
 '--port=9000' \
 --driver raspicam \
 --rotation 180 \
---width 352 \
---height 288
+--width 176 \
+--height 144
 Restart=on-abort
 
 [Install]
