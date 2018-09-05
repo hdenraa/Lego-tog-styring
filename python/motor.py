@@ -51,8 +51,14 @@ def setSpeed(finalSpeed=None, delta=None):
         elif currentSpeed == 0 and step == -1:
                 print "Switch to backward"
                 myMotor.run(Adafruit_MotorHAT.BACKWARD)
-
-        myMotor.setSpeed(abs(endSpeed))
+        if endSpeed == 125:
+                loopSpeed=65
+                while loopSpeed < 125:
+                        myMotor.setSpeed(abs(loopSpeed))
+                        time.sleep(0.05)
+                        loopSpeed += 1
+        else:
+                myMotor.setSpeed(abs(endSpeed))
         currentSpeed=endSpeed
         return endSpeed
 if __name__ == '__main__':
